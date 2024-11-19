@@ -17,13 +17,15 @@ fs.readFile(link, 'utf-8' , (erro, texto) => {
 //     "computador": 4
 // }
 
-function quebraEmParagrafos(texto)  {
+function quebraEmParagrafos(texto) {
     const paragrafos = texto.toLowerCase().split('\n');
-    const contagem = paragrafos.map((paragrafo) => {
-        return verificaPalavrasDuplicadas(paragrafo);
+    const contagem = paragrafos.flatMap((paragrafo) => {
+      if (!paragrafo) return [];
+      return verificaPalavrasDuplicadas(paragrafo);
     })
     console.log(contagem);
-}
+  }
+
 function limpaPalavras(palavra) {
     return palavra.replace(/[.,\/#!$%\^&\*;:{}=\-_`~()]/g, '');
 }
