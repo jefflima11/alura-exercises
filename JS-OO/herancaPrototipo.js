@@ -27,3 +27,5 @@ Object.setPrototypeOf(admin, user);
 admin.criarCurso();
 admin.exibirInfos();
 admin.exibirTeste();
+
+Array.prototype;
