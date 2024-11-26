@@ -11,6 +11,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "alura-exercises": "file:",
     "chalk": "^5.3.0",
     "commander": "^12.1.0"
   }
