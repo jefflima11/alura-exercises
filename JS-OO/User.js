@@ -12,6 +12,33 @@ export  default class User {
         this.#ativo = ativo
     }
 
+    get nome() {
+        return this.#nome
+    }
+
+    set nome(novoNome) {
+        this.#nome = novoNome
+    }
+
+    get email() {
+        return this.#email
+    }
+
+    get role() {
+        return this.#role
+    }
+
+    get ativo() {
+        return this.#ativo
+    }
+
+    set nome(novoNome) {
+        if (novoNome === "") {
+            throw new Error('Formato do nome não é valido')
+        }
+        this.#nome = novoNome
+    }
+
     #montaObjUser() {
         return ({
             nome: this.#nome,
@@ -23,12 +50,11 @@ export  default class User {
     }
 
     exibirInfos() {
-        const objUser = this.#montaObjUser()
-        return `${objUser.nome}, ${objUser.email}`
+        return `${this.nome}, ${this.email}`
     }
 }
 
-const novoUser = new User('Juliana', 'j@j.com', '2024-01-01');
+// const novoUser = new User('Juliana', 'j@j.com', '2024-01-01');
 // console.log(novoUser);
 // console.log(novoUser.exibirInfos());
 

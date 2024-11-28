@@ -5,15 +5,17 @@ export default class Admin extends User {
         super(nome, email, nascimento,) 
     }
 
+    exibirInfos() {
+        return `${this.nome}, ${this.email}, ${this.role}`
+    }
+
     criarCurso(nomeCurso, qtdVagas) {
         return `curso ${nomeCurso} criado com ${qtdVagas} vagas`;
     }
-
-    exibeNome() {
-        return `${this.#nome}`
-    }
 }
 
-const novoAdmin = new Admin("Rordrigo", "r@r.com", "2024-01-01");
-console.log(novoAdmin.exibirInfos());
+
+
+// const novoAdmin = new Admin("Rordrigo", "r@r.com", "2024-01-01");
+// console.log(novoAdmin.exibirInfos());
 // console.log(novoAdmin.criarCurso('JavaScript', 20));
