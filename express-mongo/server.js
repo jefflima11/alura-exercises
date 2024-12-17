@@ -1,4 +1,4 @@
-// import http from "http";
+import "dotev/config";
 import app from "./src/app.js";
 
 const PORT = 3000;
